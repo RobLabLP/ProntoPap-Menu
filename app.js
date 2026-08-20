@@ -72,6 +72,7 @@ render();
 document.querySelectorAll('.chip').forEach(btn => btn.addEventListener('click', () => {
   document.querySelectorAll('.chip').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active'); filter = btn.dataset.filter; render();
+  btn.scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
 }));
 search.addEventListener('input', render);
 
