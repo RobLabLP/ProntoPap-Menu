@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#c1121f" />
+  <meta name="description" content="Menú digital de Pronto Papá — pizzas, tablas y sushi en Illapel." />
+  <title>Pronto Papá | Menú</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Pronto Papá, inicio">
+      <span class="brand-mark">PP</span>
+      <span class="brand-copy"><strong>PRONTO PAPÁ</strong><small>Pizzería · Restaurante</small></span>
+    </a>
+    <a class="icon-btn" href="https://www.instagram.com/prontopapacl/" target="_blank" rel="noopener" aria-label="Instagram de Pronto Papá">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+    </a>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+      <div class="hero-copy reveal">
+        <span class="eyebrow">MENÚ DIGITAL · ILLAPEL</span>
+        <h1>Lo rico llega <em>pronto.</em></h1>
+        <p>Pizzas, tablas y sushi para compartir. Explora la carta y encuentra tu próximo favorito.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#menu">Ver menú</a>
+          <a class="btn btn-ghost" href="https://wa.me/56992490509" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal" data-delay="100">
+        <div class="plate plate-main"><img src="assets/pizza-card.jpg" alt="Pizza de la carta Pronto Papá" /></div>
+        <div class="floating-card"><span>🔥</span><div><b>Hecho para compartir</b><small>Pizzas · Sushi · Tablas</small></div></div>
+        <div class="pepper p1">✦</div><div class="pepper p2">●</div><div class="pepper p3">✦</div>
+      </div>
+    </section>
+
+    <section class="quick-info reveal">
+      <a href="https://www.google.com/maps/search/?api=1&query=San+Martin+11+Illapel+Chile" target="_blank" rel="noopener"><span>⌖</span><div><b>San Martín 11</b><small>Illapel, Coquimbo</small></div></a>
+      <a href="tel:+56992490509"><span>↗</span><div><b>+56 9 9249 0509</b><small>Llamar al local</small></div></a>
+      <a href="https://www.instagram.com/prontopapacl/" target="_blank" rel="noopener"><span>◎</span><div><b>@prontopapacl</b><small>Ver novedades</small></div></a>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">NUESTRA CARTA</span><h2>¿Qué se te antoja?</h2></div>
+        <button class="text-btn" id="openOriginal">Ver carta original ↗</button>
+      </div>
+
+      <div class="menu-tools reveal">
+        <div class="filters" role="tablist" aria-label="Filtrar menú">
+          <button class="chip active" data-filter="all">Todo</button>
+          <button class="chip" data-filter="pizzas">Pizzas</button>
+          <button class="chip" data-filter="tablas">Tablas</button>
+          <button class="chip" data-filter="sushi">Sushi</button>
+        </div>
+        <label class="searchbox">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="search" type="search" placeholder="Buscar plato o ingrediente…" autocomplete="off" />
+        </label>
+      </div>
+
+      <div class="feature-grid reveal">
+        <article class="feature-card red" data-category="pizzas">
+          <div><span class="tag">PIZZAS</span><h3>Clásicas y especiales</h3><p>Medianas y familiares, preparadas con combinaciones para todos los gustos.</p><button class="jump" data-jump="pizzas">Explorar pizzas →</button></div>
+          <img src="assets/pizza-hero.jpg" alt="Detalle gráfico de pizza de la carta" />
+        </article>
+        <article class="feature-card white" data-category="sushi">
+          <img src="assets/sushi.jpg" alt="Sushi fotografiado en la carta de Pronto Papá" />
+          <div><span class="tag">SUSHI</span><h3>Rolls para compartir</h3><p>Opciones mixtas, calientes y especiales premium.</p><button class="jump" data-jump="sushi">Explorar sushi →</button></div>
+        </article>
+        <article class="feature-card white" data-category="tablas">
+          <img src="assets/tabla-caliente.jpg" alt="Tabla fotografiada en la carta de Pronto Papá" />
+          <div><span class="tag">TABLAS</span><h3>Para la mesa</h3><p>Papas, carnes, ceviches y mariscos en formato abundante.</p><button class="jump" data-jump="tablas">Explorar tablas →</button></div>
+        </article>
+      </div>
+
+      <div id="menuList" class="menu-list"></div>
+      <div id="emptyState" class="empty-state" hidden>No encontramos platos con esa búsqueda.</div>
+    </section>
+
+    <section class="cta reveal">
+      <div><span class="eyebrow">¿LISTO PARA PEDIR?</span><h2>Tu favorito está a un mensaje.</h2><p>Escríbenos para consultar disponibilidad, tiempos de entrega y promociones vigentes.</p></div>
+      <a class="btn btn-light" href="https://wa.me/56992490509" target="_blank" rel="noopener">Abrir WhatsApp ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#inicio"><span class="brand-mark">PP</span><span class="brand-copy"><strong>PRONTO PAPÁ</strong><small>Pizzería · Restaurante</small></span></a>
+    <p>San Martín 11 · Illapel, Región de Coquimbo</p>
+    <p class="fineprint">Precios transcritos desde la carta proporcionada. Consulta al local ante cambios o disponibilidad.</p>
+  </footer>
+
+  <dialog id="originalDialog">
+    <div class="dialog-head"><div><b>Carta original</b><small>Imágenes proporcionadas por el restaurante</small></div><button id="closeOriginal" aria-label="Cerrar">×</button></div>
+    <div class="original-grid"><img src="assets/carta-pizza.jpg" alt="Carta original de pizzas" /><img src="assets/carta-tables.jpg" alt="Carta original de tablas y sushi" /></div>
+  </dialog>
+
+  <nav class="mobile-nav" aria-label="Acciones rápidas">
+    <a href="#menu"><span>⌕</span>Menú</a>
+    <a href="tel:+56992490509"><span>☎</span>Llamar</a>
+    <a class="order" href="https://wa.me/56992490509" target="_blank" rel="noopener"><span>↗</span>Pedir</a>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
